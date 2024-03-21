@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .text-style {
+        font-size: 30px;
+        color: green;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>Hello</li>
+      <li>Bye</li>
+      <li>Goodbye</li>
+      <li>Hello</li>
+      <li>Goodbye</li>
+      <li>Bye</li>
+      <li>Hello</li>
+      <li>Hey</li>
+      <li>Goodbye</li>
+      <li>Hello</li>
+      <li>hello</li>
+      <li>Hey</li>
+      <li>Goodbye</li>
+      <li>Hey</li>
+      <li>Helllo</li>
+    </ul>
+  </body>
+
+  <script>
+    //find all the list
+    let all_li = document.querySelectorAll("li");
+    let counter = 0;
+    //count how many li tags have the text "Hello"
+    //return number
+    function countHello() {
+      for (let i = 0; i < all_li.length; i++) {
+        if (all_li[i].innerHTML === "Hello") {
+          counter++;
+        }
+      }
+      console.log(counter); //4 <li> tags with the text "Hello"
+    }
+
+    countHello();
+
+    //make the hello have a different style
+    function styledHello() {
+      for (let i = 0; i < all_li.length; i++) {
+        if (all_li[i].textContent === "Hello") {
+          let allLiHello = all_li[i];
+          allLiHello.className = "text-style"; //to add a class/use css to add color change;
+          let greenColor = document.querySelectorAll(".text-style");
+          console.log(allLiHello);
+        }
+      }
+    }
+
+    styledHello();
+  </script>
+</html>
